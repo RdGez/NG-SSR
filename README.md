@@ -1,59 +1,53 @@
-# SsrApp
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.2.
+<br>
+<p align="center">
+  <a href="https://angular.io/" target="blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*Klh1l7wkoG6PDPb9A5oCHQ.png" width="250" alt="Nest Logo" /></a>
+</p>
 
-## Development server
+# Calculator App
 
-To start a local development server, run:
+App: Angular application to practise how to implement a SSR in Angular v19
 
-```bash
-ng serve
+### Technologies
+
+The following technologies were used:
+
+* [Angular CLI] - Creating the project with Angular v19
+
+## Starting 🚀
+
+These instructions will allow you to get a working copy of the project on your local machine for development and testing purposes.
+
+### Setup 🔧
+
+This app requires [Node.js](https://nodejs.org/) v20+ to run correctly this app. Install the dependencies and devDependencies and start the server:
+
+```sh
+# Developer Environment
+$ cd ssr_app
+$ npm install
+$ ng serve -o
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```sh
+# SSR Environment
+$ cd ssr_app
+$ npm install
+$ ng build
+$ npm run serve:ssr:ssr_app
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
+```sh
+# Run Unit Testing
+$ npm run test
+$ npm run test:coverage
 ```
 
-## Building
+For production environments 📦 :
 
-To build the project run:
-
-```bash
-ng build
+```sh
+$ npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Auth ✒️
+* **Oscar Alberto Rodríguez Viveros** - *Developer* - [RdGez](https://github.com/RdGez)
