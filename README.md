@@ -4,7 +4,7 @@
   <a href="https://angular.io/" target="blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*Klh1l7wkoG6PDPb9A5oCHQ.png" width="250" alt="Nest Logo" /></a>
 </p>
 
-# Calculator App
+# SRR App
 
 App: Angular application to practise how to implement a SSR in Angular v19
 
