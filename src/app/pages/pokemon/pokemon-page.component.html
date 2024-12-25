@@ -1,0 +1,46 @@
+@if (pokemon() === null) {
+
+  <div class="flex justify-center">
+    <h1 class="text-4xl font-bold">Loading...</h1>
+  </div>
+
+} @else {
+
+  @let myPokemon = pokemon();
+
+  <section class="flex flex-col justify-center">
+    <div class="flex justify-center">
+      <h1 class="text-4xl font-bold capitalize my-5">{{ myPokemon?.name }}</h1>
+    </div>
+  </section>
+
+  <section class="flex flex-col justify-center items-center w-full">
+    <img
+      [src]="myPokemon?.sprites?.other?.['official-artwork']?.front_default"
+      [alt]="myPokemon?.name"
+      class="w-64 h-64 mb-5"
+      width="256px"
+      height="256px"
+    />
+
+    @if ( myPokemon?.cries?.latest !== null ) {
+      <audio controls>
+        <source [src]="myPokemon?.cries?.latest" type="audio/mpeg" />
+        Your browser does not support the
+        <code>audio</code> element.
+      </audio>
+    }
+  </section>
+
+  <section class="flex flex-col justify-center">
+    <h2 class="text-2xl font-bold mt-2">Abilities</h2>
+    <div class="flex flex-wrap items-center">
+      @for (ability of myPokemon?.abilities; track ability.ability.name) {
+        <div class="bg-zinc-500 animate-fadeIn h-24 bg-opacity-25 rounded-lg shadow-md flex flex-col p-4 items-center justify-center cursor-pointer m-2">
+          <h3 class="text-lg font-bold capitalize">{{ ability.ability.name }}</h3>
+        </div>
+      }
+    </div>
+  </section>
+
+}

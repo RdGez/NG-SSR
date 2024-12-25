@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { map, Observable, tap } from 'rxjs';
-import { SimplePokemon, PokeAPIResponse } from '../Interfaces';
+import { SimplePokemon, PokeAPIResponse, Pokemon } from '../Interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +23,9 @@ export class PokemonsService {
           }))
         }),
       );
+  }
+
+  public loadPokemon(id: string): Observable<Pokemon> {
+    return this.http.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${id}`);
   }
 }
