@@ -3,7 +3,7 @@
 <hr class="my-2"/>
 
 <div class="my-5">
-  @if(pokemons()){
+  @if(pokemons() && pokemons().length > 0) {
     <pokemon-list [pokemons]="pokemons()"/>
   } @else {
     <pokemon-list-skeleton />
@@ -11,6 +11,8 @@
 </div>
 
 <div class="flex justify-between">
-  <button (click)="loadPokemons(-1)">Previous</button>
-  <button (click)="loadPokemons(+1)">Next</button>
+  <button
+    [disabled]="currentPage() === 1"
+    [routerLink]="['/pokemons/page/', currentPage()! - 1]">Previous</button>
+  <button [routerLink]="['/pokemons/page/', currentPage()! + 1]">Next</button>
 </div>
