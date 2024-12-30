@@ -2,11 +2,9 @@
   @for( pokemon of pokemons(); track pokemon.id)
   {
     <pokemon-card [pokemon]="pokemon"/>
+  } @empty {
+    <div class="col-span-5 text-center border-white h-28 flex justify-center items-center">
+      Any Pokemon's To Show!
+    </div>
   }
-
-
-  <!-- TODO: Handle when pokemon's is empty -->
-  <!-- <div class="col-span-5 text-center border-white h-28 flex justify-center items-center">
-    Any Pokemon's To Show! :(
-  </div> -->
 </div>
