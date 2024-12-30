@@ -42,6 +42,8 @@ describe('PokemonListComponent', () => {
   });
 
   it('should render the list of pokemons', () => {
-    expect(compiled.querySelectorAll('.pokemon-list-item').length).toBe(mockPokemons.length);
+    const pokemonList = compiled.querySelector('.pokemon-list');
+
+    expect(compiled.querySelectorAll('pokemon-card').length).toBe(mockPokemons.length);
   })
 });

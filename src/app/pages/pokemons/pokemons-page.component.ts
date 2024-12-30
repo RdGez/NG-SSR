@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, effect, inject, signal } from '@angular/core';
 import { PokemonListComponent } from "../../modules/pokemons/components/pokemon-list/pokemon-list.component";
-import { PokemonsService } from '../../modules/pokemons/services/Pokemons.service';
+import { PokemonsService } from '../../modules/pokemons/services/pokemons.service';
 import { SimplePokemon } from '../../modules/pokemons/Interfaces';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, RouterLink } from '@angular/router';
